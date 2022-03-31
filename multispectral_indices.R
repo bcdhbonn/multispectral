@@ -20,6 +20,7 @@ library(ggplot2)
 
 setwd("")
 
+#the folder should contain just one image 
 
 #####################################################
 # PART 3 -  Load file with multiple bands           #
@@ -35,6 +36,7 @@ r <- brick("example.tif")
 
 
 #so far for DJI Multispectral (DJI) and for the images provided by Geobasisdaten-NRW (https://www.opengeodata.nrw.de/produkte/geobasis/lbi/dop/)
+#if using the DJI Multispectral the band order might change if not all bands are stored during flight
 
 
 INPUT <- "NRW" 
@@ -57,7 +59,7 @@ if(INPUT == "DJI"){
   nirInput <- paste(c(orthoName,".4"),collapse = "")
 
 } else {
-  cat("Der gewählte Input ist:" , INPUT, ".\n Dieser ist in der Auswahl nicht vorhanden.")
+  cat("Der gewÃ¤hlte Input ist:" , INPUT, ".\n Dieser ist in der Auswahl nicht vorhanden.")
 }
 
 ########################################
